@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		49D7A38A2E08CB1100C6AAF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49D7A3712E08CB0F00C6AAF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49D7A3782E08CB0F00C6AAF0;
+			remoteInfo = "EV Station Finder";
+		};
+		49D7A3942E08CB1100C6AAF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49D7A3712E08CB0F00C6AAF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49D7A3782E08CB0F00C6AAF0;
+			remoteInfo = "EV Station Finder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49D7A3792E08CB0F00C6AAF0 /* EV Station Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EV Station Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D7A3892E08CB1100C6AAF0 /* EV Station FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EV Station FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D7A3932E08CB1100C6AAF0 /* EV Station FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EV Station FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		49D7A37B2E08CB0F00C6AAF0 /* EV Station Finder */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "EV Station Finder";
+			sourceTree = "<group>";
+		};
+		49D7A38C2E08CB1100C6AAF0 /* EV Station FinderTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "EV Station FinderTests";
+			sourceTree = "<group>";
+		};
+		49D7A3962E08CB1100C6AAF0 /* EV Station FinderUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "EV Station FinderUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49D7A3762E08CB0F00C6AAF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D7A3862E08CB1100C6AAF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D7A3902E08CB1100C6AAF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49D7A3702E08CB0F00C6AAF0 = {
+			isa = PBXGroup;
+			children = (
+				49D7A37B2E08CB0F00C6AAF0 /* EV Station Finder */,
+				49D7A38C2E08CB1100C6AAF0 /* EV Station FinderTests */,
+				49D7A3962E08CB1100C6AAF0 /* EV Station FinderUITests */,
+				49D7A37A2E08CB0F00C6AAF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49D7A37A2E08CB0F00C6AAF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49D7A3792E08CB0F00C6AAF0 /* EV Station Finder.app */,
+				49D7A3892E08CB1100C6AAF0 /* EV Station FinderTests.xctest */,
+				49D7A3932E08CB1100C6AAF0 /* EV Station FinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49D7A3782E08CB0F00C6AAF0 /* EV Station Finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D7A39D2E08CB1100C6AAF0 /* Build configuration list for PBXNativeTarget "EV Station Finder" */;
+			buildPhases = (
+				49D7A3752E08CB0F00C6AAF0 /* Sources */,
+				49D7A3762E08CB0F00C6AAF0 /* Frameworks */,
+				49D7A3772E08CB0F00C6AAF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				49D7A37B2E08CB0F00C6AAF0 /* EV Station Finder */,
+			);
+			name = "EV Station Finder";
+			packageProductDependencies = (
+			);
+			productName = "EV Station Finder";
+			productReference = 49D7A3792E08CB0F00C6AAF0 /* EV Station Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49D7A3882E08CB1100C6AAF0 /* EV Station FinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D7A3A02E08CB1100C6AAF0 /* Build configuration list for PBXNativeTarget "EV Station FinderTests" */;
+			buildPhases = (
+				49D7A3852E08CB1100C6AAF0 /* Sources */,
+				49D7A3862E08CB1100C6AAF0 /* Frameworks */,
+				49D7A3872E08CB1100C6AAF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49D7A38B2E08CB1100C6AAF0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				49D7A38C2E08CB1100C6AAF0 /* EV Station FinderTests */,
+			);
+			name = "EV Station FinderTests";
+			packageProductDependencies = (
+			);
+			productName = "EV Station FinderTests";
+			productReference = 49D7A3892E08CB1100C6AAF0 /* EV Station FinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49D7A3922E08CB1100C6AAF0 /* EV Station FinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D7A3A32E08CB1100C6AAF0 /* Build configuration list for PBXNativeTarget "EV Station FinderUITests" */;
+			buildPhases = (
+				49D7A38F2E08CB1100C6AAF0 /* Sources */,
+				49D7A3902E08CB1100C6AAF0 /* Frameworks */,
+				49D7A3912E08CB1100C6AAF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49D7A3952E08CB1100C6AAF0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				49D7A3962E08CB1100C6AAF0 /* EV Station FinderUITests */,
+			);
+			name = "EV Station FinderUITests";
+			packageProductDependencies = (
+			);
+			productName = "EV Station FinderUITests";
+			productReference = 49D7A3932E08CB1100C6AAF0 /* EV Station FinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49D7A3712E08CB0F00C6AAF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					49D7A3782E08CB0F00C6AAF0 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					49D7A3882E08CB1100C6AAF0 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 49D7A3782E08CB0F00C6AAF0;
+					};
+					49D7A3922E08CB1100C6AAF0 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 49D7A3782E08CB0F00C6AAF0;
+					};
+				};
+			};
+			buildConfigurationList = 49D7A3742E08CB0F00C6AAF0 /* Build configuration list for PBXProject "EV Station Finder" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49D7A3702E08CB0F00C6AAF0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 49D7A37A2E08CB0F00C6AAF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49D7A3782E08CB0F00C6AAF0 /* EV Station Finder */,
+				49D7A3882E08CB1100C6AAF0 /* EV Station FinderTests */,
+				49D7A3922E08CB1100C6AAF0 /* EV Station FinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49D7A3772E08CB0F00C6AAF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D7A3872E08CB1100C6AAF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D7A3912E08CB1100C6AAF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49D7A3752E08CB0F00C6AAF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D7A3852E08CB1100C6AAF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D7A38F2E08CB1100C6AAF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49D7A38B2E08CB1100C6AAF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49D7A3782E08CB0F00C6AAF0 /* EV Station Finder */;
+			targetProxy = 49D7A38A2E08CB1100C6AAF0 /* PBXContainerItemProxy */;
+		};
+		49D7A3952E08CB1100C6AAF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49D7A3782E08CB0F00C6AAF0 /* EV Station Finder */;
+			targetProxy = 49D7A3942E08CB1100C6AAF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		49D7A39B2E08CB1100C6AAF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49D7A39C2E08CB1100C6AAF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49D7A39E2E08CB1100C6AAF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EV Station Finder/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolas.EV-Station-Finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49D7A39F2E08CB1100C6AAF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EV Station Finder/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolas.EV-Station-Finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49D7A3A12E08CB1100C6AAF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolas.EV-Station-FinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EV Station Finder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EV Station Finder";
+			};
+			name = Debug;
+		};
+		49D7A3A22E08CB1100C6AAF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolas.EV-Station-FinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EV Station Finder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EV Station Finder";
+			};
+			name = Release;
+		};
+		49D7A3A42E08CB1100C6AAF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolas.EV-Station-FinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EV Station Finder";
+			};
+			name = Debug;
+		};
+		49D7A3A52E08CB1100C6AAF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolas.EV-Station-FinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EV Station Finder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49D7A3742E08CB0F00C6AAF0 /* Build configuration list for PBXProject "EV Station Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D7A39B2E08CB1100C6AAF0 /* Debug */,
+				49D7A39C2E08CB1100C6AAF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D7A39D2E08CB1100C6AAF0 /* Build configuration list for PBXNativeTarget "EV Station Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D7A39E2E08CB1100C6AAF0 /* Debug */,
+				49D7A39F2E08CB1100C6AAF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D7A3A02E08CB1100C6AAF0 /* Build configuration list for PBXNativeTarget "EV Station FinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D7A3A12E08CB1100C6AAF0 /* Debug */,
+				49D7A3A22E08CB1100C6AAF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D7A3A32E08CB1100C6AAF0 /* Build configuration list for PBXNativeTarget "EV Station FinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D7A3A42E08CB1100C6AAF0 /* Debug */,
+				49D7A3A52E08CB1100C6AAF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49D7A3712E08CB0F00C6AAF0 /* Project object */;
+}
