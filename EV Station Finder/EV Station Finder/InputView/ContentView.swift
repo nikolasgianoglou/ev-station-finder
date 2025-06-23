@@ -11,8 +11,7 @@ struct ContentView: View {
     
     @StateObject var viewModel = InputViewModel()
     @State var text: String = ""
-//    @State var isValid: Bool = false
-    
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -21,28 +20,9 @@ struct ContentView: View {
                 VStack(spacing: 30) {
                     Text("EV Station Finder")
                     
-                    TextField("Type something here", text: $text)
-                        .padding()
-                        .padding(.horizontal)
-                        .background(Color.gray.opacity(0.1))
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                        .keyboardType(.numberPad)
+                    textField
                     
-                    Button(action: {
-                        viewModel.validateZipCode(text)
-                    }) {
-                        Text("Search".uppercased())
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .padding()
-                            .padding(.horizontal, 10)
-                            .background(
-                                Color("red")
-                                    .cornerRadius(10)
-                                    .shadow(radius: 10)
-                            )
-                    }
+                    searchButton
                     
                     NavigationLink(
                         destination: Text("Teste"),
@@ -65,6 +45,35 @@ struct ContentView: View {
 }
 
 extension ContentView {
+    // MARK: - Components
+    var textField: some View {
+        TextField("Type Zip Code here", text: $text)
+            .padding()
+            .padding(.horizontal)
+            .background(Color.gray.opacity(0.1))
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .keyboardType(.numberPad)
+    }
+    
+    var searchButton: some View {
+        Button(action: {
+            viewModel.validateZipCode(text)
+        }) {
+            Text("Search".uppercased())
+                .font(.headline)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+                .padding()
+                .padding(.horizontal, 10)
+                .background(
+                    Color("red")
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
+                )
+        }
+    }
+    
+    //MARK: - Functions
     func getAlert() -> Alert {
         Alert(
             title: Text("Invalid ZIP Code"),
