@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct InputView: View {
     
     @StateObject var viewModel = InputViewModel()
     @State var text: String = ""
@@ -41,10 +41,10 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    InputView()
 }
 
-extension ContentView {
+extension InputView {
     // MARK: - Components
     var textField: some View {
         TextField("Type Zip Code here", text: $text)

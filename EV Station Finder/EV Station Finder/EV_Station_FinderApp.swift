@@ -11,7 +11,7 @@ import SwiftUI
 struct EV_Station_FinderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InputView()
         }
     }
 }
