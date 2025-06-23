@@ -8,14 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var text: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color("white")
+            
+            VStack(spacing: 30) {
+                Text("EV Station Finder")
+                
+                TextField("Type something here", text: $text)
+                    .padding()
+                    .padding(.horizontal)
+                    .background(Color.gray.opacity(0.1))
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                
+                Button {
+                    // action
+                } label: {
+                    Text("Search".uppercased())
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .padding(.horizontal, 10)
+                        .background(
+                            Color("red")
+                                .cornerRadius(10)
+                                .shadow(radius: 10)
+                        )
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
