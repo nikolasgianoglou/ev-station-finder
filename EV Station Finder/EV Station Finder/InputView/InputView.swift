@@ -17,25 +17,27 @@ struct InputView: View {
             ZStack {
                 Color("white")
                 
-                VStack(spacing: 30) {
-                    Text("EV Station Finder")
-                    
-                    textField
-                    
-                    searchButton
-                    
-                    NavigationLink(
-                        destination: ListStationView(viewModel: ListStationViewModel(zipCode: text)),
-                        isActive: $viewModel.isValidZip
-                    ) {
-                        EmptyView()
-                    }
+                title
+                
+                textField
+                
+                searchButton
+                
+                if let lastZip = viewModel.lastZip {
+                    lastZipButton(zipCode: lastZip)
                 }
-                .alert(isPresented: $viewModel.showError) {
-                    getAlert()
+                
+                NavigationLink(
+                    destination: ListStationView(viewModel: ListStationViewModel(zipCode: text)),
+                    isActive: $viewModel.isValidZip
+                ) {
+                    EmptyView()
                 }
-                .padding()
             }
+            .alert(isPresented: $viewModel.showError) {
+                getAlert()
+            }
+            .padding()
         }
     }
 }
@@ -46,31 +48,62 @@ struct InputView: View {
 
 extension InputView {
     // MARK: - Components
+    var title: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "bolt.car")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 36, height: 36)
+                .foregroundColor(Color("red"))
+            
+            Text("EV Station Finder")
+                .font(.system(size: 28, weight: .bold, design: .rounded))
+                .foregroundColor(.primary)
+        }
+        .padding(.bottom, 16)
+    }
+    
     var textField: some View {
-        TextField("Type Zip Code here", text: $text)
+        TextField("Type ZIP Code here", text: $text)
             .padding()
-            .padding(.horizontal)
             .background(Color.gray.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .cornerRadius(10)
             .keyboardType(.numberPad)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+            )
     }
     
     var searchButton: some View {
         Button(action: {
             viewModel.validateZipCode(text)
         }) {
-            Text("Search".uppercased())
-                .font(.headline)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .padding()
-                .padding(.horizontal, 10)
-                .background(
-                    Color("red")
-                        .cornerRadius(10)
-                        .shadow(radius: 10)
-                )
+            buttonText(label: "Search")
         }
+    }
+    
+    func lastZipButton(zipCode: String) -> some View {
+        Button(action: {
+            text = zipCode
+            viewModel.validateZipCode(text)
+        }) {
+            buttonText(label: "Use Last ZipCode")
+        }
+    }
+    
+    func buttonText(label: String) -> some View {
+        Text(label.uppercased())
+            .font(.headline)
+            .fontWeight(.semibold)
+            .foregroundColor(.white)
+            .padding()
+            .padding(.horizontal, 10)
+            .background(
+                Color("red")
+                    .cornerRadius(10)
+                    .shadow(radius: 10)
+            )
     }
     
     //MARK: - Functions
