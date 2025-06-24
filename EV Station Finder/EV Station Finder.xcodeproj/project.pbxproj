@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		490912642E0ADB3200840FF9 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 490912632E0ADB3200840FF9 /* Secrets.plist */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		49D7A38A2E08CB1100C6AAF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490912632E0ADB3200840FF9 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		49D7A3792E08CB0F00C6AAF0 /* EV Station Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EV Station Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D7A3892E08CB1100C6AAF0 /* EV Station FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EV Station FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D7A3932E08CB1100C6AAF0 /* EV Station FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EV Station FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		49D7A3702E08CB0F00C6AAF0 = {
 			isa = PBXGroup;
 			children = (
+				490912632E0ADB3200840FF9 /* Secrets.plist */,
 				49D7A37B2E08CB0F00C6AAF0 /* EV Station Finder */,
 				49D7A38C2E08CB1100C6AAF0 /* EV Station FinderTests */,
 				49D7A3962E08CB1100C6AAF0 /* EV Station FinderUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490912642E0ADB3200840FF9 /* Secrets.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

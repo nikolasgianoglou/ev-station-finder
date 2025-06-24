@@ -9,28 +9,62 @@ import Foundation
 
 class ListStationViewModel: ObservableObject {
     @Published var isLoading = false
-    @Published var stations: [EVStation] = []
+    @Published var stationViews: [EVStationViewData] = []
+    private let zipCode: String
     
-    var loader = EstationFinderLoader(url: URL(string: "https://developer.nrel.gov/api/alt-fuel-stations/v1.json?fuel_type=ELEC&zip=90024&api_key=bBq4N7KlpYzQuvM0FBMIrKVe5sc5sPqWFEJOxEKw")!,
-                                      client: URLSessionHTTPClient())
+    var loader: EstationFinderLoader?
     
-    init() {
-        getStations(zipCode: "")
+    init(zipCode: String) {
+        self.zipCode = zipCode
+        configureLoader()
+        getStations()
+    }
+
+    private func configureLoader() {
+        guard let url = APIEndpoint.stationsURL(zip: zipCode, apiKey: Secrets.apiKey) else {
+            print("Invalid URL")
+            return
+        }
+        loader = EstationFinderLoader(url: url, client: URLSessionHTTPClient())
     }
     
-    func getStations(zipCode: String) {
+    func getStations() {
         isLoading = true
-        loader.load { [weak self] result in
+        loader?.load { [weak self] result in
             DispatchQueue.main.async {
                 guard let self else { return }
                 self.isLoading = false
                 switch result {
                 case .success(let stations):
-                    self.stations = stations.fuelStations ?? []
+                    let items = (stations.fuelStations ?? []).map(EVStationViewData.init)
+                    self.stationViews = items
                 case .failure:
-                    self.stations = []
+                    self.stationViews = []
                 }
             }
         }
+    }
+}
+
+struct EVStationViewData: Identifiable {
+    let id: Int
+    let displayLines: [String]
+    
+    init(from station: EVStation) {
+        self.id = station.id ?? UUID().hashValue
+        var lines: [String] = []
+        if let name = station.stationName {
+            lines.append("Station name: \(name)")
+        }
+        if let address = station.streetAddress {
+            lines.append("Street Address: \(address)")
+        }
+        if let state = station.state {
+            lines.append("State: \(state)")
+        }
+        if let zip = station.zip {
+            lines.append("Zip Code: \(zip)")
+        }
+        self.displayLines = lines
     }
 }

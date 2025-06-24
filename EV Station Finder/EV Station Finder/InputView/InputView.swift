@@ -25,7 +25,7 @@ struct InputView: View {
                     searchButton
                     
                     NavigationLink(
-                        destination: ListStationView(),
+                        destination: ListStationView(viewModel: ListStationViewModel(zipCode: text)),
                         isActive: $viewModel.isValidZip
                     ) {
                         EmptyView()

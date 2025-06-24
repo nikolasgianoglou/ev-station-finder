@@ -9,26 +9,26 @@ import SwiftUI
 
 struct ListStationView: View {
     
-    @ObservedObject var viewModel = ListStationViewModel()
+    @ObservedObject var viewModel: ListStationViewModel
     
     var body: some View {
             if viewModel.isLoading {
                 ProgressView()
             } else {
-                if viewModel.stations.isEmpty {
+                if viewModel.stationViews.isEmpty {
                     Text("There are no available EV Station for the selected ZIP Code")
                         .font(.title3)
                 } else {
                     List {
-                        ForEach(viewModel.stations) { station in
+                        ForEach(viewModel.stationViews) { station in
                             NavigationLink(
                                 destination: Text("")
                             ) {
                                 VStack(alignment: .leading) {
-                                    Text("\("Station name:") \(station.stationName ?? "")")
-                                    Text("\("Street Adress:") \(station.streetAddress ?? "")")
-                                    Text("\("State:") \(station.state ?? "")")
-                                    Text("\("Zip Code:") \(station.zip ?? "")")
+                                    ForEach(station.displayLines, id: \.self) { line in
+                                        Text(line)
+                                            .font(.headline)
+                                    }
                                 }
                                 .font(.headline)
                             }
@@ -41,5 +41,5 @@ struct ListStationView: View {
 }
 
 #Preview {
-    ListStationView()
+    ListStationView(viewModel: ListStationViewModel(zipCode: "94100"))
 }
