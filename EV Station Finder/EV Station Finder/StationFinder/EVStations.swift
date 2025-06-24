@@ -8,7 +8,7 @@
 import Foundation
 
 struct EVStationsResponse: Decodable {
-    let fuelStations: [EVStation]
+    let fuelStations: [EVStation]?
 
     enum CodingKeys: String, CodingKey {
         case fuelStations = "fuel_stations"
@@ -16,12 +16,12 @@ struct EVStationsResponse: Decodable {
 }
 
 struct EVStation: Decodable, Identifiable {
-    let id: Int
-    let stationName: String
-    let streetAddress: String
-    let city: String
-    let state: String
-    let zip: String
+    let id: Int?
+    let stationName: String?
+    let streetAddress: String?
+    let city: String?
+    let state: String?
+    let zip: String?
 
     enum CodingKeys: String, CodingKey {
         case id

@@ -29,8 +29,7 @@ final class EstationFinderLoader: StationFinder {
             guard self != nil else { return }
             switch result {
             case let .success(data, response):
-                break
-//                completion(FeedItemsMapper.map(data, from: response))
+                completion(StationMapper.map(data, from: response))
             case .failure:
                 completion(.failure(Error.noConnectivity))
             }
