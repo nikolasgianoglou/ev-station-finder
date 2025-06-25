@@ -18,9 +18,7 @@ Level 2: ✅ (Partially)
 🔐 Configuring the API Key
 This project requires an API key to access EV station data.
 
-Create the Secrets.plist file
-
-In the root directory of the project (where the .xcodeproj file is located), create a new file named Secrets.plist with the following content:
+Create the Secrets.plist file in the root directory of the project (where the .xcodeproj file is located), create a new file named Secrets.plist with the following content:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
