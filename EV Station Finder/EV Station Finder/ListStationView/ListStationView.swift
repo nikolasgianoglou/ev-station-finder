@@ -62,7 +62,7 @@ extension ListStationView {
     
     var stationsListView: some View {
         List(viewModel.stationViews) { station in
-            NavigationLink(destination: Text("")) {
+            NavigationLink(destination: StationDetailView(viewModel: StationDetailViewModel(station: station.station))) {
                 VStack(alignment: .leading) {
                     ForEach(station.displayLines, id: \.self) { line in
                         Text(line)

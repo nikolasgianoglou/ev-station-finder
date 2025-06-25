@@ -54,6 +54,7 @@ class ListStationViewModel: ObservableObject {
 struct EVStationViewData: Identifiable {
     let id: Int
     let displayLines: [String]
+    let station: EVStation
     
     init(from station: EVStation) {
         self.id = station.id ?? UUID().hashValue
@@ -70,6 +71,7 @@ struct EVStationViewData: Identifiable {
         if let zip = station.zip {
             lines.append("Zip Code: \(zip)")
         }
+        self.station = station
         self.displayLines = lines
     }
 }
