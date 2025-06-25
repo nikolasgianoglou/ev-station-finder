@@ -7,13 +7,13 @@ ViewModel: Handles business logic and data formatting. For example, ListStationV
 
 View: SwiftUI views like InputView, ListStationView, and StationDetailView were kept simple and reactive, binding to @Published properties from the ViewModels.
 
-Level 1: ✅
--> Input ZIP Code
--> Fetch and display station list
--> Handle loading and empty states
-Level 2: ✅ (Partially)
--> Tap a station to view a detail screen
--> Display station name and full address
+Level 1: ✅  
+-> Input ZIP Code  
+-> Fetch and display station list  
+-> Handle loading and empty states  
+Level 2: ✅ (Partially)  
+-> Tap a station to view a detail screen  
+-> Display station name and full address  
 
 🔐 Configuring the API Key
 This project requires an API key to access EV station data.
