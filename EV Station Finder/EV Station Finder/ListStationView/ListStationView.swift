@@ -13,36 +13,13 @@ struct ListStationView: View {
     var body: some View {
         Group {
             if viewModel.isLoading {
-                ProgressView()
-                
+                loadingView
             } else if let errorMsg = viewModel.errorMessage {
-                VStack {
-                    Spacer()
-                    Text(errorMsg)
-                        .font(.title3)
-                        .foregroundColor(.red)
-                        .multilineTextAlignment(.center)
-                        .padding()
-                    Spacer()
-                }
-                
+                errorView(message: errorMsg)
             } else if viewModel.stationViews.isEmpty {
-                Text("There are no available EV Station for the selected ZIP Code")
-                    .font(.title3)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                
+                emptyListView
             } else {
-                List(viewModel.stationViews) { station in
-                    NavigationLink(destination: Text("")) {
-                        VStack(alignment: .leading) {
-                            ForEach(station.displayLines, id: \.self) { line in
-                                Text(line).font(.headline)
-                            }
-                        }
-                    }
-                }
-                .navigationTitle("Available EV Stations")
+                stationsListView
             }
         }
         .alert(item: $viewModel.errorMessage) { msg in
@@ -54,8 +31,49 @@ struct ListStationView: View {
                 }
             )
         }
+        .navigationTitle("Available EV Stations")
     }
 }
+
+extension ListStationView {
+    
+    var loadingView: some View {
+        ProgressView()
+    }
+    
+    func errorView(message: String) -> some View {
+        VStack {
+            Spacer()
+            Text(message)
+                .font(.title3)
+                .foregroundColor(.red)
+                .multilineTextAlignment(.center)
+                .padding()
+            Spacer()
+        }
+    }
+    
+    var emptyListView: some View {
+        Text("There are no available EV Station for the selected ZIP Code")
+            .font(.title3)
+            .multilineTextAlignment(.center)
+            .padding()
+    }
+    
+    var stationsListView: some View {
+        List(viewModel.stationViews) { station in
+            NavigationLink(destination: Text("")) {
+                VStack(alignment: .leading) {
+                    ForEach(station.displayLines, id: \.self) { line in
+                        Text(line)
+                            .font(.headline)
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 #Preview {
