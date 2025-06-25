@@ -7,17 +7,31 @@
 
 import Foundation
 
+
+
 final class EstationFinderLoader: StationFinder {
 
     private let url: URL
     private let client: HTTPClient
     
-    public enum Error: Swift.Error {
+    public typealias Result = StationFinderResult
+    
+    public enum Error: Swift.Error, LocalizedError {
         case noConnectivity
         case invalidData
+        case invalidZip
+
+        public var errorDescription: String? {
+            switch self {
+            case .noConnectivity:
+                return "No internet connection. Please check your network and try again."
+            case .invalidData:
+                return "Could not load data from the server. Please try again later."
+            case .invalidZip:
+                return "The ZIP code provided did not return any station data."
+            }
+        }
     }
-    
-    public typealias Result = StationFinderResult
     
     public init(url: URL, client: HTTPClient) {
         self.url = url
@@ -30,8 +44,14 @@ final class EstationFinderLoader: StationFinder {
             switch result {
             case let .success(data, response):
                 completion(StationMapper.map(data, from: response))
-            case .failure:
-                completion(.failure(Error.noConnectivity))
+            case .failure(let error):
+                let mappedError: Error
+                if (error as NSError).domain == NSURLErrorDomain {
+                    mappedError = .noConnectivity
+                } else {
+                    mappedError = .invalidData
+                }
+                completion(.failure(mappedError))
             }
         }
     }

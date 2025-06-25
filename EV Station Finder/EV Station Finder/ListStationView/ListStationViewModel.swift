@@ -11,6 +11,7 @@ class ListStationViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var stationViews: [EVStationViewData] = []
     private let zipCode: String
+    @Published var errorMessage: String? = nil
     
     var loader: EstationFinderLoader?
     
@@ -32,14 +33,18 @@ class ListStationViewModel: ObservableObject {
         isLoading = true
         loader?.load { [weak self] result in
             DispatchQueue.main.async {
-                guard let self else { return }
+                guard let self = self else { return }
                 self.isLoading = false
+                
                 switch result {
                 case .success(let stations):
                     let items = (stations.fuelStations ?? []).map(EVStationViewData.init)
                     self.stationViews = items
-                case .failure:
+                    self.errorMessage = nil
+                    
+                case .failure(let error):
                     self.stationViews = []
+                    self.errorMessage = error.localizedDescription
                 }
             }
         }

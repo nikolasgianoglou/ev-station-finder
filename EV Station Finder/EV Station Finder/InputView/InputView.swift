@@ -17,21 +17,23 @@ struct InputView: View {
             ZStack {
                 Color("white")
                 
-                title
-                
-                textField
-                
-                searchButton
-                
-                if let lastZip = viewModel.lastZip {
-                    lastZipButton(zipCode: lastZip)
-                }
-                
-                NavigationLink(
-                    destination: ListStationView(viewModel: ListStationViewModel(zipCode: text)),
-                    isActive: $viewModel.isValidZip
-                ) {
-                    EmptyView()
+                VStack(spacing: 30) {
+                    title
+                    
+                    textField
+                    
+                    searchButton
+                    
+                    if let lastZip = viewModel.lastZip {
+                        lastZipButton(zipCode: lastZip)
+                    }
+                    
+                    NavigationLink(
+                        destination: ListStationView(viewModel: ListStationViewModel(zipCode: text)),
+                        isActive: $viewModel.isValidZip
+                    ) {
+                        EmptyView()
+                    }
                 }
             }
             .alert(isPresented: $viewModel.showError) {
