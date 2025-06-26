@@ -15,8 +15,8 @@ Level 2: ✅ (Partially)
 -> Tap a station to view a detail screen  
 -> Display station name and full address  
 
-🔐 Configuring the API Key
+🔐 Configuring the API Key  
 This project requires an API key to access EV station data.
-Replace the placeholder value with your actual API key, which you can obtain from:
-👉 https://developer.nrel.gov/docs/api-key/
+Insert the value for API_KEY in the Secrets.plist with your actual API key, which you can obtain from:
+👉 https://developer.nrel.gov/docs/api-key/  
 Once you get your API Key, insert in the Secrets.plist file.
